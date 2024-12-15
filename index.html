@@ -33,6 +33,47 @@
   font-style: normal;
   font-size: 40px
 }
+
+.modern-button {
+      position: relative;
+      padding: 15px 40px;
+      font-size: 20px;
+      font-weight: bold;
+      color: white;
+      background: linear-gradient(90deg, #ff0000, #00bf63, #0500ff, #000000);
+      border: none;
+      border-radius: 50px;
+      cursor: pointer;
+      overflow: hidden;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5), 0px 4px 20px rgba(, 0, 0, 0.5);
+    }
+    
+    .modern-button::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: -100%;
+      width: 300%;
+      height: 100%;
+      background: linear-gradient(90deg, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.2));
+      transform: skewX(-45deg);
+      transition: all 0.5s ease;
+    }
+    
+    .modern-button:hover::before {
+      left: 100%;
+    }
+    
+    .modern-button:hover {
+      transform: translateY(-5px);
+      box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.5), 0px 6px 25px rgba(0, 0, 0, 0.5);
+    }
+    
+    .modern-button:active {
+      transform: scale(0.95);
+      box-shadow: 0px 4px 8px rgba(255, 0, 124, 0.4), 0px 4px 15px rgba(89, 0, 255, 0.4);
+	    }	    
     </style>
 </head>
 <body>
@@ -48,6 +89,8 @@
     <marquee class="white-text" behavior="scroll" direction="left">
         The Radio for school learning.
     </marquee>
+	<div class="space">
+		<button class="modern-button" onclick="window.location.href='https://rodri-06009.github.io/Radio_Player_Rodri/index_2.html';">Aller à la Super Radio Ado FM</button>
     </center>
 </div>
 </div>
